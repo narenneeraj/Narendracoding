@@ -1,0 +1,10 @@
+resource "azuread_user" "user" {
+  user_principal_name = "newuser@email.onmicrosoft.com"
+  display_name        = "newuser1"
+  mail_nickname       = "newuser1"
+  password            = "Password@#3210"
+}
+
+provider "azurerm" {
+    features{}
+}
