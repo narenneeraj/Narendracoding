@@ -1,0 +1,29 @@
+resource "azuread_user" "user1" {
+  user_principal_name = "newuser1@email.onmicrosoft.com"
+  display_name        = "newuser1"
+  mail_nickname       = "newuser1"
+  password            = "Password@#3210"
+}
+
+resource "azuread_user" "user2" {
+  user_principal_name = "newuser2@email.onmicrosoft.com"
+  display_name        = "newuser2"
+  mail_nickname       = "newuser2"
+  password            = "Password@#3210"
+}
+resource "azuread_user" "user3" {
+  user_principal_name = "newuser3@email.onmicrosoft.com"
+  display_name        = "newuse3"
+  mail_nickname       = "newuser3"
+  password            = "Password@#3210"
+}
+
+resource "azuread_user" "user4" {
+  user_principal_name = "newuser4@email.onmicrosoft.com"
+  display_name        = "newuser4"
+  mail_nickname       = "newuser4"
+  password            = "Password@#3210"
+}
+provider "azurerm" {
+    features{}
+}
