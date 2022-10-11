@@ -1,0 +1,9 @@
+provider "azurerm" {
+    features {}
+}
+
+
+resource "azuread_group" "example" {
+  display_name     = "group_name"
+  security_enabled = true
+}
