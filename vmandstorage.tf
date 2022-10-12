@@ -1,12 +1,12 @@
 resource azurerm_resource_group "resource_group"{
-name = "rgbyme1234"
+name = "rg_name"
 location = "eastus"
 }
 
 resource "azurerm_storage_account" "storage_account"{
-name = "storagebyme1234"
+name = "storage_name"
 location = "centralus"
-resource_group_name = "rgbyme1234"
+resource_group_name = "rg_name"
 account_tier = "Standard"
 account_replication_type = "LRS"
 }
@@ -15,21 +15,21 @@ provider "azurerm" {
 }
 
 resource "azurerm_virtual_network" "virtual_network" {
-  name                = "vnetbyme1234"
+  name                = "vnet_name"
   address_space       = ["10.0.0.0/16"]
   location            = "eastus"
-  resource_group_name = "rgbyme1234"
+  resource_group_name = "rg_name"
 }
 resource "azurerm_subnet" "subnet" {
-  name                 = "mysubnetbyme1235"
-  resource_group_name  = "rgbyme1234"
-  virtual_network_name = "vnetbyme1234"
+  name                 = "subnet_name"
+  resource_group_name  = "rg_name"
+  virtual_network_name = "vnet_name"
   address_prefixes     = ["10.0.2.0/24"]
 }
 resource "azurerm_network_interface" "network_interface" {
-  name                = "nicbyme1234"
+  name                = "nic_name"
   location            = "eastus"
-  resource_group_name = "rgbyme1234"
+  resource_group_name = "rg_name"
 
   ip_configuration {
     name                          = "internal"
@@ -38,8 +38,8 @@ resource "azurerm_network_interface" "network_interface" {
   }
 }
 resource "azurerm_windows_virtual_machine" "virtual_machine" {
-  name                = "vmbyme1234"
-  resource_group_name = "rgbyme1234"
+  name                = "vm_name"
+  resource_group_name = "rg_name"
   location            = "eastus"
   size                = "Standard_B2s"
   admin_username      = "narenbyme1234"
