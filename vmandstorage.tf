@@ -42,8 +42,8 @@ resource "azurerm_windows_virtual_machine" "virtual_machine" {
   resource_group_name = "rg_name"
   location            = "eastus"
   size                = "Standard_B2s"
-  admin_username      = "narenbyme1234"
-  admin_password      = "Dheeraj@3210"
+  admin_username      = "username1234"
+  admin_password      = "Password@3210"
   network_interface_ids = [
     azurerm_network_interface.network_interface.id,
   ]
