@@ -6,6 +6,6 @@ resource "azuread_user" "user" {
 }
 
 provider "azurerm" {
-    features{}
+    features {}
 }
 
